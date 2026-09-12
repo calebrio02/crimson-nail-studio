@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Crimson Nail Studio — Manicura Rusa | San José</title>
+<meta name="description" content="Manicura rusa completa en San José, Costa Rica. Rubber base Illuminary + hardgel American Creator. Reserva tu cita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#0E0E0F; --maroon:#390007; --mist:#F0F4F5; --knight:#9BA0AB;
+  --hair:rgba(155,160,171,.28); --mist-dim:rgba(240,244,245,.62);
+  --serif:'Playfair Display',Georgia,serif; --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--mist);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--maroon);color:var(--mist)}
+.wrap{max-width:560px;margin:0 auto;padding:0 24px}
+@media(min-width:900px){.wrap{max-width:760px}}
+
+/* ---------- header ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:linear-gradient(to bottom,rgba(14,14,15,.92),rgba(14,14,15,.65) 70%,transparent);backdrop-filter:blur(6px)}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:560px;margin:0 auto}
+@media(min-width:900px){.bar{max-width:760px}}
+.logo{font-family:var(--serif);font-size:15px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.logo em{font-style:italic;color:var(--knight)}
+.nav-link{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mist-dim);text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:3px}
+.nav-link:active{color:var(--mist)}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;padding-bottom:8vh;
+  background:
+   radial-gradient(120% 70% at 85% -10%, rgba(57,0,7,.75) 0%, transparent 55%),
+   radial-gradient(90% 55% at 10% 108%, rgba(57,0,7,.45) 0%, transparent 60%),
+   var(--void)}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:1px;background:var(--hair)}
+.kicker{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--knight);margin-bottom:22px}
+.kicker::before{content:"";display:inline-block;width:26px;height:1px;background:var(--knight);vertical-align:middle;margin-right:12px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,10vw,58px);line-height:1.08;letter-spacing:-.01em}
+h1 em{font-style:italic;color:var(--mist)}
+h1 .thin{color:var(--mist-dim)}
+.hero-sub{margin-top:22px;max-width:40ch;color:var(--mist-dim);font-size:15px}
+.pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.pill{border:1px solid var(--hair);border-radius:2px;padding:8px 14px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--knight)}
+.hero-cta{margin-top:38px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--mist);color:var(--void);text-decoration:none;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:17px 30px;border-radius:2px;transition:background .25s,transform .25s;min-height:48px;text-align:center}
+.hero-cta .btn{flex:1 1 auto}
+.btn:active{transform:scale(.98)}
+.btn-ghost{display:inline-block;color:var(--mist-dim);text-decoration:none;font-size:11px;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid var(--hair);padding-bottom:4px;min-height:48px;display:inline-flex;align-items:center}
+.hero-hours{margin-top:34px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--knight)}
+
+/* ---------- section common ---------- */
+section{padding:72px 0;position:relative}
+.hairline{height:1px;background:var(--hair);margin:0 24px;max-width:560px;margin-left:auto;margin-right:auto}
+@media(min-width:900px){.hairline{max-width:760px}}
+.sec-label{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--knight);margin-bottom:18px}
+.sec-label span{color:var(--mist)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,7vw,40px);line-height:1.15}
+h2 em{font-style:italic}
+
+/* ---------- service / manifesto ---------- */
+.svc-name{font-family:var(--serif);font-size:clamp(30px,8vw,44px);font-style:italic;margin-bottom:14px}
+.svc-desc{color:var(--mist-dim);font-size:15px;max-width:44ch}
+.formula{margin-top:26px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:18px 0}
+.formula div{display:flex;justify-content:space-between;gap:16px;padding:7px 0;font-size:13px}
+.formula .k{color:var(--knight);letter-spacing:.1em;text-transform:uppercase;font-size:10.5px;padding-top:2px}
+.formula .v{font-family:var(--serif);font-style:italic;font-size:16px;text-align:right}
+.pillars{margin-top:44px;display:grid;gap:0}
+.pillar{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--hair)}
+.pillar:last-child{border-bottom:1px solid var(--hair)}
+.pillar .n{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--maroon);background:var(--mist);width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+.pillar h3{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.pillar p{font-size:13.5px;color:var(--mist-dim)}
+.deposit-note{margin-top:34px;font-size:13px;color:var(--knight);border-left:1px solid var(--maroon);padding-left:16px}
+.deposit-note strong{color:var(--mist);font-weight:600}
+
+/* ---------- booking ---------- */
+#reserva{background:linear-gradient(180deg,var(--void) 0%, rgba(57,0,7,.28) 100%)}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin:30px 0 18px}
+.cal-title{font-family:var(--serif);font-style:italic;font-size:20px}
+.cal-nav{width:44px;height:44px;border:1px solid var(--hair);background:transparent;color:var(--mist);font-size:18px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s}
+.cal-nav:disabled{opacity:.25;cursor:default}
+.cal-nav:not(:disabled):active{border-color:var(--mist)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.dow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--knight);text-align:center;padding:8px 0}
+.day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:13.5px;border:1px solid transparent;border-radius:3px;background:transparent;color:var(--mist);cursor:pointer;transition:all .18s;-webkit-tap-highlight-color:transparent}
+.day:disabled{color:rgba(155,160,171,.3);cursor:default}
+.day.open:active{border-color:var(--knight)}
+.day.sel{background:var(--mist);color:var(--void);font-weight:600}
+.day.today{border-color:var(--hair)}
+.slots-wrap{margin-top:24px;display:none}
+.slots-wrap.show{display:block}
+.slots-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--knight);margin-bottom:14px}
+.slots-label b{color:var(--mist);font-weight:600}
+.slots{display:flex;flex-wrap:wrap;gap:9px}
+.slot{border:1px solid var(--hair);background:transparent;color:var(--mist);font-family:var(--sans);font-size:13px;padding:13px 17px;border-radius:2px;cursor:pointer;min-height:48px;transition:all .18s;-webkit-tap-highlight-color:transparent}
+.slot.sel{background:var(--mist);color:var(--void);border-color:var(--mist);font-weight:600}
+.slot:active{transform:scale(.97)}
+
+/* confirm */
+.confirm{margin-top:30px;display:none;border:1px solid var(--hair);padding:26px 24px;background:rgba(57,0,7,.22)}
+.confirm.show{display:block}
+.confirm h3{font-family:var(--serif);font-style:italic;font-size:22px;margin-bottom:12px}
+.confirm .line{display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid var(--hair);font-size:13.5px}
+.confirm .line:first-of-type{border-top:none}
+.confirm .line .k{color:var(--knight)}
+.confirm .ok{color:var(--mist);font-weight:600}
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:22px;background:#25D366;color:#04291B;text-decoration:none;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:17px;border-radius:2px;min-height:52px}
+.wa-btn svg{width:19px;height:19px;flex:none}
+.fine{margin-top:14px;font-size:11.5px;color:var(--knight);text-align:center}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--hair);padding:52px 0 64px}
+.foot-grid{display:grid;gap:30px}
+.foot-col h4{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--knight);margin-bottom:12px}
+.foot-col p,.foot-col a{font-size:14px;color:var(--mist-dim);text-decoration:none;line-height:1.9;display:block}
+.foot-col a:active{color:var(--mist)}
+.foot-brand{font-family:var(--serif);font-size:22px;font-style:italic;margin-bottom:6px}
+.foot-legal{margin-top:40px;font-size:11px;color:rgba(155,160,171,.5);letter-spacing:.06em;text-align:center}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <span class="logo">Crimson <em>Nail</em> Studio</span>
+    <a class="nav-link" href="#reserva">Reservar</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">San José · Costa Rica</p>
+      <h1><em>El arte</em><br>de la manicura<br><span class="thin">rusa.</span></h1>
+      <p class="hero-sub">Un solo servicio, ejecutado a la perfección: cutícula limpia, base de rubber y hardgel de gama alta que resiste hasta cuatro semanas.</p>
+      <div class="pill-row">
+        <span class="pill">Rubber Base · Illuminary</span>
+        <span class="pill">Hardgel · American Creator</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="#reserva">Reservar cita</a>
+        <a class="btn-ghost" href="https://instagram.com/crimson.nailstudio" target="_blank" rel="noopener">@crimson.nailstudio</a>
+      </div>
+      <p class="hero-hours">Lun – Vie · 2:00 – 6:00 pm<br>Sáb · 9:00 am – 6:00 pm</p>
+    </div>
+  </section>
+
+  <!-- SERVICIO -->
+  <section id="servicio">
+    <div class="wrap">
+      <p class="sec-label">El servicio — <span>01</span></p>
+      <p class="svc-name">Manicura rusa completa</p>
+      <p class="svc-desc">Técnica de secado en húmedo sobre la cutícula: sin tirón, sin dolor y con un acabado de porcelana. Cada cita dura aproximadamente 90 minutos y se trabaja en agenda limitada para garantizar la precisión.</p>
+      <div class="formula">
+        <div><span class="k">Base</span><span class="v">Rubber Base — Illuminary</span></div>
+        <div><span class="k">Estructura</span><span class="v">Hardgel — American Creator</span></div>
+        <div><span class="k">Duración</span><span class="v">~90 minutos</span></div>
+        <div><span class="k">Resistencia</span><span class="v">Hasta 4 semanas</span></div>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="n">I</span>
+          <div><h3>Preparación de cutícula</h3><p>Trabajo con fresa de precisión en modo húmedo: limpieza total sin agresión.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="n">II</span>
+          <div><h3>Aplicación de rubber base</h3><p>Base elástica Illuminary que absorbe el impacto y protege la uña natural.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="n">III</span>
+          <div><h3>Estructura con hardgel</h3><p>Hardgel American Creator para curvatura apex perfecta y máxima durabilidad.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="n">IV</span>
+          <div><h3>Acabado espejo</h3><p>Brillo de porcelana y sellado de bordes. Saludo final a tus manos.</p></div>
+        </div>
+      </div>
+      <p class="deposit-note"><strong>Reserva con seña de ₡5,000</strong> — se abona a tu servicio y se confirma por WhatsApp al +506 8977-2852.</p>
+    </div>
+  </section>
+
+  <div class="hairline"></div>
+
+  <!-- RESERVA -->
+  <section id="reserva">
+    <div class="wrap">
+      <p class="sec-label">Reserva — <span>02</span></p>
+      <h2>Elige tu <em>fecha</em></h2>
+
+      <div class="cal-head">
+        <button class="cal-nav" id="prevM" aria-label="Mes anterior">‹</button>
+        <span class="cal-title" id="calTitle"></span>
+        <button class="cal-nav" id="nextM" aria-label="Mes siguiente">›</button>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+
+      <div class="slots-wrap" id="slotsWrap">
+        <p class="slots-label">Horarios disponibles — <b id="slotsDate"></b></p>
+        <div class="slots" id="slots"></div>
+      </div>
+
+      <div class="confirm" id="confirm">
+        <h3>Tu cita</h3>
+        <div class="line"><span class="k">Servicio</span><span class="ok">Manicura rusa completa</span></div>
+        <div class="line"><span class="k">Fecha</span><span class="ok" id="cDate"></span></div>
+        <div class="line"><span class="k">Hora</span><span class="ok" id="cTime"></span></div>
+        <div class="line"><span class="k">Seña</span><span class="ok">₡5,000 (se abona al servicio)</span></div>
+        <a class="wa-btn" id="waBtn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Confirmar por WhatsApp
+        </a>
+        <p class="fine">Al confirmar se abre WhatsApp con tu solicitud lista para Juliana.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap foot-grid">
+      <div class="foot-col">
+        <p class="foot-brand">Crimson Nail Studio</p>
+        <p style="color:var(--knight);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase">Est. 2024 · San José, CR</p>
+      </div>
+      <div class="foot-col">
+        <h4>Reservas</h4>
+        <a href="https://wa.me/50689772852" target="_blank" rel="noopener">+506 8977-2852</a>
+        <a href="https://instagram.com/crimson.nailstudio" target="_blank" rel="noopener">@crimson.nailstudio</a>
+      </div>
+      <div class="foot-col">
+        <h4>Horario</h4>
+        <p>Lunes a viernes · 2:00 – 6:00 pm</p>
+        <p>Sábados · 9:00 am – 6:00 pm</p>
+        <p>Domingos · Cerrado</p>
+      </div>
+      <p class="foot-legal">Mockup de propuesta de diseño — Crimson Nail Studio 2026</p>
+    </div>
+  </footer>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  // Horario: slots de inicio cada hora. Lun-Vie 2-6pm → 14,15,16,17 | Sáb 9am-6pm → 9..17. getDay(): 0=Dom
+  var SLOTS = {1:["2:00 pm","3:00 pm","4:00 pm","5:00 pm"],2:["2:00 pm","3:00 pm","4:00 pm","5:00 pm"],
+    3:["2:00 pm","3:00 pm","4:00 pm","5:00 pm"],4:["2:00 pm","3:00 pm","4:00 pm","5:00 pm"],
+    5:["2:00 pm","3:00 pm","4:00 pm","5:00 pm"],6:["9:00 am","10:00 am","11:00 am","12:00 pm","1:00 pm","2:00 pm","3:00 pm","4:00 pm","5:00 pm"],0:[]};
+  var MESES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  var DIAS=["L","M","X","J","V","S","D"];
+  var hoy=new Date(); hoy.setHours(0,0,0,0);
+  var view=new Date(hoy.getFullYear(),hoy.getMonth(),1);
+  var minView=new Date(hoy.getFullYear(),hoy.getMonth(),1);
+  var maxView=new Date(hoy.getFullYear(),hoy.getMonth()+2,1);
+  var selDate=null, selSlot=null;
+
+  var grid=document.getElementById('calGrid'), title=document.getElementById('calTitle'),
+      prev=document.getElementById('prevM'), next=document.getElementById('nextM'),
+      slotsWrap=document.getElementById('slotsWrap'), slotsEl=document.getElementById('slots'),
+      slotsDate=document.getElementById('slotsDate'),
+      confirm=document.getElementById('confirm'), cDate=document.getElementById('cDate'),
+      cTime=document.getElementById('cTime'), waBtn=document.getElementById('waBtn');
+
+  function sameDay(a,b){return a&&b&&a.getTime()===b.getTime();}
+  function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function fmtLong(d){var f=new Intl.DateTimeFormat('es-CR',{weekday:'long',day:'numeric',month:'long'});var s=f.format(d);return s.charAt(0).toUpperCase()+s.slice(1);}
+
+  function render(){
+    title.textContent=MESES[view.getMonth()]+' '+view.getFullYear();
+    prev.disabled = sameDay(view,minView);
+    next.disabled = sameDay(view,maxView);
+    grid.innerHTML='';
+    DIAS.forEach(function(d){var el=document.createElement('span');el.className='dow';el.textContent=d;grid.appendChild(el);});
+    var first=new Date(view.getFullYear(),view.getMonth(),1);
+    var offset=(first.getDay()+6)%7; // lunes = 0
+    for(var i=0;i<offset;i++){grid.appendChild(document.createElement('span'));}
+    var dim=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+    for(var d=1;d<=dim;d++){
+      (function(d){
+        var date=new Date(view.getFullYear(),view.getMonth(),d);
+        var btn=document.createElement('button');
+        btn.type='button'; btn.className='day'; btn.textContent=d;
+        var closed=date.getDay()===0 || date<hoy;
+        if(closed){btn.disabled=true;}
+        else{
+          btn.classList.add('open');
+          if(sameDay(date,hoy))btn.classList.add('today');
+          if(sameDay(date,selDate))btn.classList.add('sel');
+          btn.addEventListener('click',function(){selDate=date;selSlot=null;render();renderSlots();});
+        }
+        grid.appendChild(btn);
+      })(d);
+    }
+  }
+  function renderSlots(){
+    if(!selDate){slotsWrap.classList.remove('show');confirm.classList.remove('show');return;}
+    var s=SLOTS[selDate.getDay()];
+    slotsDate.textContent=fmtLong(selDate);
+    slotsEl.innerHTML='';
+    s.forEach(function(t){
+      var b=document.createElement('button');
+      b.type='button'; b.className='slot'+(selSlot===t?' sel':''); b.textContent=t;
+      b.addEventListener('click',function(){selSlot=t;renderSlots();});
+      slotsEl.appendChild(b);
+    });
+    slotsWrap.classList.add('show');
+    if(selSlot)buildConfirm(); else confirm.classList.remove('show');
+  }
+  function buildConfirm(){
+    cDate.textContent=fmtLong(selDate);
+    cTime.textContent=selSlot;
+    var msg="Hola Juliana! Deseo reservar mi Manicura Rusa para el "+fmtLong(selDate)+" a las "+selSlot+". Entiendo que la seña es de ₡5,000.";
+    waBtn.href="https://wa.me/50689772852?text="+encodeURIComponent(msg);
+    confirm.classList.add('show');
+  }
+  prev.addEventListener('click',function(){if(!prev.disabled){view=new Date(view.getFullYear(),view.getMonth()-1,1);render();}});
+  next.addEventListener('click',function(){if(!next.disabled){view=new Date(view.getFullYear(),view.getMonth()+1,1);render();}});
+  render();
+})();
+</script>
+</body>
+</html>
